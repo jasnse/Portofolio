@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-//import photo from "public/profile.svg";
+
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Profile(){
@@ -20,14 +20,14 @@ export default function Profile(){
 
 <h1 className="text-4xl font-extrabold text-white">Jason Theofillus Gunawan</h1>
 
-<h2 className="text-3xl font-medium text-teal-400 h-10">
+<h2 className="fs-3 fw-semibold text-teal-custom" style={{height: "1.2rem" }}>
 <Typewriter
 words={[
         "System Analyst",
         "UI/UX Designer",
         "Quality Assurance Engineer",
         "Business Analyst",
-        "Database Developer"
+        "Data Analyst"
         ]}
 loop={true}
 cursor
@@ -38,18 +38,18 @@ delaySpeed={1000}
 />
 </h2>
 
-<div className="relative inline-flex items-center gap-3 border border-green-500 
-rounded-full px-4 py-2 mt-1 group ">
-        <div className="relative">
-          
-          <div className="absolute h-3 w-3 rounded-full bg-green-500 animate-ping opacity-75"></div>
-          <div className="h-3 w-3 rounded-full bg-green-500"></div>
+
+<div className="position-relative d-inline-flex align-items-center border border-success rounded-pill px-3 py-1 mt-1">
+        <div className="position-relative me-2" style={{ width: "12px", height: "12px" }}>
+          <div className="ping"></div>
+          <div className="position-absolute top-0 start-0 bg-success rounded-circle"
+          style={{ width: "12px", height: "12px" }}></div>
         </div>
-        <span className="text-xs text-white">Available for new jobs</span>
-      </div>
+        <span className="text-white small">Available for new jobs</span>
+</div>
 
 <p className="max-w-md text-3x1 text-gray-300">
-        A passionate developer with experience in testing, building, and designing modern web applications.
+        An enthusiastic IT professional skilled in Testing, Data, and Designing cutting-edge web applications.
       </p>
 
     <div className="flex flex-row gap-3">
