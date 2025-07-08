@@ -20,17 +20,17 @@ export default function Work(){
     },
     {
       id: 2,
-      title: 'First Portofolio Website',
-      description: 'an portofolio website that built with Vite framework',
-      image: '/project2.jpg',
+      title: 'Bloom Mate',
+      description: 'An UI/UX design specifically for a "invention" competition',
+      image: '/blooMate.svg',
       link: '#',
-      skills: ['Front-end developer', 'UI/UX Design']
+      skills: ['UI/UX Design']
     },
     {
       id: 3,
       title: 'Watch Dealer',
       description: 'Desktop application to buy and sell watch',
-      image: '/project3.jpg',
+      image: '/watchDealer.svg',
       link: '#',
       skills: ['Back-end developer', 'Front-end developer']
     },
@@ -38,7 +38,7 @@ export default function Work(){
       id: 4,
       title: 'Kinder Log',
       description: 'Conducted system analysis and designed the system',
-      image: '/project4.jpg',
+      image: '/Kinderlog.svg',
       link: '#',
       skills: ['System Analyst', 'Business Analyst']
     }
@@ -106,12 +106,14 @@ export default function Work(){
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="p-4 bg-gray-800">
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain "
               />
-              <div className="p-6">
+              </div>
+              <div className="p-6 bg-gray-800">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
