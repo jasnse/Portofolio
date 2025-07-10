@@ -3,6 +3,7 @@
 "use client";
 import Profile from "./components/header";
 import MyWork from "./components/workSection";
+import Certification from "./components/Certification";
 
 import { useState, useEffect } from "react";
 import SplashScreen from "./components/SplashScreen"; // pastikan path benar
@@ -33,6 +34,10 @@ export default function HomePage() {
          {/* Work Section */}
         <section id="work" className="min-h-screen  flex items-center justify-center bg-gray-900">
           <MyWork />
+        </section>
+
+        <section id="certification" className="min-h-screen  flex items-center justify-center bg-gray-900">
+          <Certification />
         </section>
 
         <section id="connect" className="min-h-screen  flex items-center justify-center bg-gray-500">

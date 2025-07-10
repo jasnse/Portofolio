@@ -5,15 +5,27 @@ import { useState } from 'react';
 export default function Work(){
      const [isSkillsOpen, setIsSkillsOpen] = useState(false);
      const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+     const [activeProject, setActiveProject] = useState<Project | null>(null);
 
- const skills = ['Data Analyst','UI/UX Design','Front-end developer','Software Quality Assurance',
-                 'Back-end developer', 'System Analyst', 'Business Analyst'];
+ const skills = ['Data Analyst','UI/UX Design','Front-end','Software Quality Assurance',
+                 'Back-end', 'System Analyst', 'Business Analyst'];
+
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  explanation: string;
+  image: string;
+  link: string;
+  skills: string[];
+};
 
  const projects = [
     {
       id: 1,
       title: 'Portfolio Website',
       description: 'Built with Next.js and Tailwind CSS and Node.JS',
+      explanation: 'lorem ipsum dolor sit ameta aowkowkowkwokwowkwokwokwowkowkowkowkwokwok',
       image: '/project1.jpg',
       link: '#',
       skills: ['UI/UX Design', 'Front-end developer']
@@ -22,25 +34,46 @@ export default function Work(){
       id: 2,
       title: 'Bloom Mate',
       description: 'An UI/UX design specifically for a "invention" competition',
-      image: '/blooMate.svg',
-      link: '#',
+      explanation: 'UI design of an application that serves as a platform for buying and selling plants.',
+      image: '/bloomMate.svg',
+      link: 'https://www.figma.com/proto/Judip42OFBbA1cjPSb5TwF/Untitled?node-id=0-1&t=sF7st7IuSZQNX7ZT-1',
       skills: ['UI/UX Design']
     },
     {
       id: 3,
       title: 'Watch Dealer',
       description: 'Desktop application to buy and sell watch',
+      explanation: 'Developing a desktop application for buying and selling watches using Java with the JavaFX framework integrated with MySQL.',
       image: '/watchDealer.svg',
-      link: '#',
+      link: 'https://github.com/jasnse/Watches-Dealer',
       skills: ['Back-end developer', 'Front-end developer']
     },
     {
       id: 4,
       title: 'Kinder Log',
       description: 'Conducted system analysis and designed the system',
+      explanation: 'Conducted system analysis and designed the system for an application called "kinderlog" prior to its development.',
       image: '/Kinderlog.svg',
-      link: '#',
+      link: 'https://binusianorg-my.sharepoint.com/personal/jason_gunawan_binus_ac_id/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjason%5Fgunawan%5Fbinus%5Fac%5Fid%2FDocuments%2FProject%20AISAD&ga=1',
       skills: ['System Analyst', 'Business Analyst']
+    },
+    {
+      id: 5,
+      title: 'Thesis',
+      description: 'The thesis serves as a key requirement for earning my bachelors degree.',
+      explanation: 'My thesis, titled "Analysis Requirement and Strategic Plan Development of E-Procurement Information System at PT Raja Elektronik," focuses on several key aspects including the design of system architecture, business processes, and UI/UX design for the companys e-procurement system.',
+      image: '/binus sis logo.svg',
+      link: 'https://1drv.ms/b/s!Avalv0dHxVNci0YZfAEcBgicPWuZ?e=63Wg4d',
+      skills: ['System Analyst', 'Business Analyst', 'UI/UX Design']
+    },
+    {
+      id: 6,
+      title: 'COMING SOON',
+      description: 'Project is still Work In Progress',
+      explanation: 'Project is still Work In Progress',
+      image: '/comingsoon.svg',
+      link: '',
+      skills: ['WIP']
     }
   ];
 
@@ -110,7 +143,7 @@ export default function Work(){
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-48 object-contain "
+                className="w-full h-50 object-cover rounded-md "
               />
               </div>
               <div className="p-6 bg-gray-800">
@@ -125,7 +158,7 @@ export default function Work(){
                 </div>
 
                 <button 
-                 onClick={() => window.location.href = project.link} // Or use your preferred navigation method
+                  onClick={() => setActiveProject(project)} // Or use your preferred navigation method
                 className="inline-block px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors"
                 >
                  See More
@@ -136,6 +169,57 @@ export default function Work(){
           ))}
         </div>
       </div>
+      
+       {activeProject && (
+   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity">
+    <div className="bg-white text-gray-900 rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-6 relative animate-fade-in">
+      
+      {/* Close button */}
+      <button
+        onClick={() => setActiveProject(null)}
+        className="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+      {/* Modal content */}
+      <h2 className="text-2xl font-semibold mb-2">{activeProject.title}</h2>
+      <p className="text-gray-600 mb-4">{activeProject.explanation}</p>
+
+      {/*skills display */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {activeProject.skills.map((skill, idx) => (
+          <span
+            key={idx}
+            className="px-2 py-1 bg-gray-200 text-sm rounded-full text-gray-700"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+
+      {/* Modal footer buttons */}
+      <div className="flex justify-end gap-2 mt-4">
+        <button
+          onClick={() => setActiveProject(null)}
+          className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition"
+        >
+          Close
+        </button>
+        <a
+          href={activeProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+        >
+          Visit Link
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
     </section>
   );
 
