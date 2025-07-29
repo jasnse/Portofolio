@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jason Theofillus Gunawan",
-  description: "easter egg founded",
+  description: "my portfolio website",
+   icons: {
+    icon: '/browser-logo.ico',
+  },
 };
 
 export default function RootLayout({

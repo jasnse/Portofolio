@@ -23,9 +23,9 @@ const certifications: Certification[] = [
 //     images: ["/uiux-cert.jpg", "/bootcamp-team.jpg"],
 //   },
   {
-    title: "Internship Completion",
-    description: "This certificate was obtained after finishing an internship at BCA Finance for about one year in the role of Quality Assurance Automation.",
-    images: ["/intern-cert.jpg", "/team-photo.jpg"],
+    title: "Beyond Success",
+    description: "Beyond Successis a personal development program designed to help individuals achieve holistic success—in career, character, relationships, and purpose—through mindset training, leadership principles, and a supportive community.",
+    images: ["/Bs.svg"],
   }
 ];
 
