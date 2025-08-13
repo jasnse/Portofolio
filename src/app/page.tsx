@@ -4,6 +4,7 @@
 import Profile from "./components/header";
 import MyWork from "./components/workSection";
 import Certification from "./components/Certification";
+import Tools from "./components/tools";
 
 import { useState, useEffect } from "react";
 import SplashScreen from "./components/SplashScreen"; // pastikan path benar
@@ -26,13 +27,18 @@ export default function HomePage() {
   (
 <main className="min-h-screen flex items-center justify-center bg-gray-900">
    <div className="h-full">
+    
         {/* Profile Section (Hero) */}
         <section className="min-h-screen  flex items-center justify-center">
           <Profile />
         </section>
 
-         {/* Work Section */}
+         {/* tools */}
         <section id="work" className="min-h-screen  flex items-center justify-center bg-gray-900">
+          <Tools />
+        </section>
+
+         <section id="work" className="min-h-screen  flex items-center justify-center bg-gray-900">
           <MyWork />
         </section>
 
