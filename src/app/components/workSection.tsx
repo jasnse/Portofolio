@@ -25,9 +25,9 @@ type Project = {
       id: 1,
       title: 'Portfolio Website',
       description: 'Built with Next.js and Tailwind CSS and Node.JS',
-      explanation: 'lorem ipsum dolor sit ameta aowkowkowkwokwowkwokwokwowkowkowkowkwokwok',
-      image: '/project1.jpg',
-      link: '#',
+      explanation: 'My personal portfolio built with Next.js and Tailwind CSS.',
+      image: '/porto.svg',
+      link: 'https://github.com/jasnse/Portofolio.git',
       skills: ['UI/UX Design', 'Front-end developer']
     },
     {
@@ -68,12 +68,30 @@ type Project = {
     },
     {
       id: 6,
-      title: 'COMING SOON',
-      description: 'Project is still Work In Progress',
-      explanation: 'Project is still Work In Progress',
-      image: '/comingsoon.svg',
-      link: '',
-      skills: ['WIP']
+      title: 'E-Collection Bank Jakarta',
+      description: 'System development project at "Bank Jakarta".',
+      explanation: 'Responsible for conducting performance and API testing for the Bank DKI e-collection project.',
+      image: '/bankDKI.svg',
+      link: 'https://github.com/jasnse/performance-test-Bank-Jakarta',
+      skills: ['Software Quality Assurance']
+    },
+    {
+      id: 7,
+      title: 'CRMS Bank Danamon',
+      description: 'System development project at "Bank Danamon".',
+      explanation: 'Responsible for performing system integration testing for the development of the Collection and Recovery Management System application at Bank Danamon Indonesia.',
+      image: '/BDI.svg',
+      link: 'private',
+      skills: ['Software Quality Assurance'] 
+    },
+    {
+      id: 8,
+      title: 'CIS BCA Finance',
+      description: 'System development project at "BCA Finance".',
+      explanation: 'Responsible for performing system integration testing for the development of the Collection and Recovery Management System application at Bank Danamon Indonesia.',
+      image: '/BDI.svg',
+      link: 'private',
+      skills: ['Software Quality Assurance'] 
     }
   ];
 
@@ -158,7 +176,7 @@ type Project = {
                 </div>
 
                 <button 
-                  onClick={() => setActiveProject(project)} // Or use your preferred navigation method
+                  onClick={() => setActiveProject(project)}
                 className="inline-block px-4 py-2 bg-white text-black rounded hover:bg-gray-200 transition-colors"
                 >
                  See More
@@ -208,12 +226,18 @@ type Project = {
           Close
         </button>
         <a
-          href={activeProject.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+        onClick={(e) => {
+                if (!activeProject.link || activeProject.link === 'private') {
+                 e.preventDefault();
+                alert('Project is confidential');
+                }
+          }}
+        href={activeProject.link && activeProject.link !== 'private' ? activeProject.link : '#'}
+        target={activeProject.link && activeProject.link !== 'private' ? '_blank' : '_self'}
+        rel="noopener noreferrer"
+        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
         >
-          Visit Link
+        Visit Link
         </a>
       </div>
     </div>

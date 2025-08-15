@@ -34,7 +34,7 @@ export default function HomePage() {
         </section>
 
          {/* tools */}
-        <section id="work" className="min-h-screen  flex items-center justify-center bg-gray-900">
+        <section id="tools" className="min-h-screen  flex items-center justify-center bg-gray-900">
           <Tools />
         </section>
 

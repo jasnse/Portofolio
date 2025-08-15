@@ -19,9 +19,9 @@ const tools: Tool[] = [
   { name: "Selenium", level: "intermediate", image: "/logo/selenium.png" },
   { name: "Appium", level: "beginner", image: "/logo/appium.png" },
   { name: "Playwright", level: "beginner", image: "/logo/playwright.png" },
-  { name: "Groovy", level: "beginner", image: "/images/groovy-logo.png" },
-  { name: "Figma", level: "intermediate", image: "/images/figma-logo.png" },
-  { name: "Typescript", level: "intermediate", image: "/images/typescript-logo.png" },
+  { name: "Katalon Studio", level: "beginner", image: "/logo/katalon.png" },
+  { name: "Figma", level: "intermediate", image: "/logo/fimga.png" },
+  { name: "Typescript", level: "intermediate", image: "/logo/ts.png" },
 ];
 
 const getWidth = (level: "beginner" | "intermediate" | "advanced") => {
