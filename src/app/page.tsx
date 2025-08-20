@@ -46,12 +46,6 @@ export default function HomePage() {
           <Certification />
         </section>
 
-        <section id="connect" className="min-h-screen  flex items-center justify-center bg-gray-500">
-          <div className="text-center p-8">
-            <h2 className="text-4xl font-bold mb-8 text-white">lets connect</h2>
-          </div>
-        </section>
-
     </div>
 
         
