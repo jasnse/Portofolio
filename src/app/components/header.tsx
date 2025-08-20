@@ -72,8 +72,8 @@ delaySpeed={1000}
         <button 
         onClick={() => {
             const link = document.createElement('a');
-            link.href = '/CV - Jason.pdf';
-            link.download = 'Jason-Gunawan-Resume.pdf';
+            link.href = "/CV - Jason.pdf";
+            link.download = "CV-Jason.pdf";
             link.click();
          }}
         className="bg-transparent border-2 border-purple-400 text-purple-400 hover:bg-purple-400/10 transition-all duration-300 py-2 px-4 rounded-full text-lg font-medium">
