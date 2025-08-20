@@ -88,8 +88,8 @@ type Project = {
       id: 8,
       title: 'CIS BCA Finance',
       description: 'System development project at "BCA Finance".',
-      explanation: 'Responsible for performing system integration testing for the development of the Collection and Recovery Management System application at Bank Danamon Indonesia.',
-      image: '/BDI.svg',
+      explanation: 'Responsible for performing system integration testing for the development of the Customer Identification System application at BCA Finance.',
+      image: '/bcaf.svg',
       link: 'private',
       skills: ['Software Quality Assurance'] 
     }

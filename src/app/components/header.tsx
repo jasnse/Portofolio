@@ -4,6 +4,7 @@ import Image from "next/image";
 
 
 import { Typewriter } from "react-simple-typewriter";
+import { FaEnvelope, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 export default function Profile(){
     return(
@@ -48,7 +49,7 @@ delaySpeed={1000}
         <span className="text-white small">Available for new jobs</span>
 </div>
 
-<p className="max-w-md text-3x1 text-gray-300">
+      <p className="max-w-md text-3x1 text-gray-300">
         An enthusiastic IT professional skilled in Testing, Data, and Designing cutting-edge web applications.
       </p>
 
@@ -77,6 +78,27 @@ delaySpeed={1000}
           Resume
         </button>
     </div>
+
+    <footer className="
+          fixed bottom-0 left-0 right-0
+          w-full h-16
+          bg-gray-900/90 text-white
+          backdrop-blur
+          border-t border-white/10
+          flex flex-col items-center gap-4 text-center
+          px-6 z-50
+          [padding-bottom:env(safe-area-inset-bottom)]
+          pt-3
+        ">
+         <nav className="flex items-center gap-4">
+          <div className="flex gap-4 text-3xl">
+          <a href="mailto:jasonoke03@gmail.com" className="hover:text-red-500 transition text-white"><FaEnvelope>Email</FaEnvelope></a>
+          <a href="https://wa.me/6285211821384" target="_blank" className="hover:text-green-400 transition text-white"><FaWhatsapp>Whatsapp</FaWhatsapp></a>
+          <a href="https://linkedin.com/in/jasontheofillusgunawan" target="_blank" className="hover:text-blue-500 transition text-white"><FaLinkedin>linkedin</FaLinkedin></a>
+          </div>
+        </nav>
+
+    </footer>
 
 </div>
     );

@@ -8,20 +8,20 @@ type Tool = {
 
 const tools: Tool[] = [
   { name: "Java", level: "advanced", image: "/logo/Java.png" },
-  { name: "Android Studio", level: "advanced", image: "/logo/android-studio.png" },
-  { name: "Python", level: "advanced", image: "/logo/python.png" },
-  { name: "PL/SQL", level: "intermediate", image: "/logo/sql.png" },
+  { name: "Android Studio", level: "beginner", image: "/logo/android-studio.png" },
+  { name: "Python", level: "intermediate", image: "/logo/python.png" },
+  { name: "PL/SQL", level: "advanced", image: "/logo/sql.png" },
   { name: "Javascript", level: "intermediate", image: "/logo/Javascript.png" },
   { name: "Postman", level: "intermediate", image: "/logo/postman.png" },
   { name: "JMeter", level: "intermediate", image: "/logo/Jmeter.png" },
-  { name: "NextJS", level: "intermediate", image: "/logo/nextJs.png" },
+  { name: "NextJS", level: "beginner", image: "/logo/nextJs.png" },
   { name: "Tailwind CSS", level: "beginner", image: "/logo/tailwindCSS.png" },
-  { name: "Selenium", level: "intermediate", image: "/logo/selenium.png" },
-  { name: "Appium", level: "beginner", image: "/logo/appium.png" },
-  { name: "Playwright", level: "beginner", image: "/logo/playwright.png" },
-  { name: "Katalon Studio", level: "beginner", image: "/logo/katalon.png" },
-  { name: "Figma", level: "intermediate", image: "/logo/fimga.png" },
-  { name: "Typescript", level: "intermediate", image: "/logo/ts.png" },
+  { name: "Selenium", level: "advanced", image: "/logo/selenium.png" },
+  { name: "Appium", level: "advanced", image: "/logo/appium.png" },
+  { name: "Playwright", level: "intermediate", image: "/logo/playwright.png" },
+  { name: "Katalon Studio", level: "advanced", image: "/logo/katalon.png" },
+  { name: "Figma", level: "advanced", image: "/logo/fimga.png" },
+  { name: "Typescript", level: "beginner", image: "/logo/ts.png" },
 ];
 
 const getWidth = (level: "beginner" | "intermediate" | "advanced") => {
