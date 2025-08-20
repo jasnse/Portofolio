@@ -21,7 +21,7 @@ export default function Profile(){
 
 <h1 className="text-4xl font-extrabold text-white">Jason Theofillus Gunawan</h1>
 
-<h2 className="fs-3 fw-semibold text-teal-custom" style={{height: "1.2rem" }}>
+<h2 className="text-[1.75rem] font-semibold text-teal-300 leading-none whitespace-nowrap">
 <Typewriter
 words={[
         "System Analyst",
@@ -40,13 +40,15 @@ delaySpeed={1000}
 </h2>
 
 
-<div className="position-relative d-inline-flex align-items-center border border-success rounded-pill px-3 py-1 mt-1">
-        <div className="position-relative me-2" style={{ width: "12px", height: "12px" }}>
-          <div className="ping"></div>
-          <div className="position-absolute top-0 start-0 bg-success rounded-circle"
-          style={{ width: "12px", height: "12px" }}></div>
-        </div>
-        <span className="text-white small">Available for new jobs</span>
+<div className="relative inline-flex items-center border border-green-500 rounded-full px-4 py-1 mt-1">
+  {/* Dot + ping */}
+  <div className="relative mr-2 h-3 w-3">
+    <span className="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping"></span>
+    <span className="absolute inset-0 rounded-full bg-green-500"></span>
+  </div>
+
+  {/* Teks */}
+  <span className="text-white text-sm">Available for new jobs</span>
 </div>
 
       <p className="max-w-md text-3x1 text-gray-300">

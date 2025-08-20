@@ -59,7 +59,7 @@ export default function Tools() {
                       alt={tool.name}
                       className="w-18 h-18 mr-4 object-cover" // Gambar logo dengan ukuran kecil
                     />
-                    <h5 className="text-sm font-bold text-[#1E1E1E]">{tool.name}</h5> {/* Nama alat */}
+                    <h5 className="text-1xl font-bold text-white">{tool.name}</h5> {/* Nama alat */}
                   </div>
 
                   {/* Level Badge */}
